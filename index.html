@@ -6,16 +6,15 @@
 	<title>ISEN Ouest - Accueil</title>
     <style>
 html {
-    font-family: Open Sans,sans-serif;
+	font-family: Open Sans,sans-serif;
 }
 
-/* Conteneur principal du header */
+/* HEADER */
 .header-isen {
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* Organisation interne */
 .header-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -25,13 +24,11 @@ html {
   justify-content: space-between;
 }
 
-/* Logo */
 .header-logo img {
   height: 45px;
   width: auto;
 }
 
-/* Navigation */
 .header-nav {
   background: #e30613;
   flex: 1;
@@ -63,6 +60,118 @@ html {
 
 .header-nav a:hover {
   text-decoration: underline;
+}
+
+/* IMAGES */
+.dp-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.dp-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000;
+}
+.dp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+.dp-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.2s ease;
+  padding: 3px 3px 0;
+  position: relative;
+}
+.dp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+.dp-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.dp-card p {
+  padding: 1px 0.5em;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+  background-color: #05819d;
+  color: white;
+  display: inline;
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+}
+
+/* BLOCKS */
+.block-container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.block-columns {
+	display: flex;
+	gap: 40px;
+	align-items: normal;
+}
+
+.block-alternance {
+	margin: 40px auto;
+	border: 2px solid #c8102e;
+	border-radius: 8px;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.block-alternance img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.block-alternance-content {
+	padding: 24px 30px;
+}
+
+.block-alternance-content h2 {
+	font-size: 200%;
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.block-alternance-content p {
+	font-size: 16px;
+	line-height: 1.6;
+	color: #333;
+	margin-bottom: 16px;
+}
+
+.block-button {
+	margin: auto;
+	text-align: center;
+}
+
+.block-button a {
+	background-color: #e30613;
+	color: #fff;
+	display: inline-block;
+	padding: .5rem 2rem;
+	border-radius: 3.45rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.block-button a:hover {
+	text-decoration: underline;
 }
 
 /* FOOTER */
@@ -130,6 +239,57 @@ html {
     </nav>
   </div>
 </header>
+
+<!-- Section Images -->
+<section class="dp-section">
+  <h2>Nos formations ingénieurs</h2>
+  <div class="dp-grid">
+    <div class="dp-card">
+      <a href="#">
+        <img src="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-cybersecurite.png" alt="Cybersécurité">
+      </a>
+    </div>
+    <div class="dp-card">
+      <a href="#">
+        <img src="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-developpement-logiciel.png" alt="Développement logiciel">
+      </a>
+    </div>
+    <div class="dp-card">
+      <a href="#">
+        <img src="https://isen-ouest.fr/wp-content/uploads/2024/10/21/vignette-dp-intelligence-artificielle.png" alt="Intelligence artificielle">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Section Blocks -->
+<div class="block-container">
+  <div class="block-columns">
+    <section class="block-alternance">
+      <img src="https://isen-ouest.fr/wp-content/uploads/2024/10/18/formation-initiale-scaled.jpg" alt="Post-bac">
+      <div class="block-alternance-content">
+        <h2>Formations post-bac</h2>
+        <p>Chaque étudiant construit son propre parcours de formation sur 5 ans.</p>
+        <p>Au cours des trois premières années post-bac, les étudiants choisissent leur cursus parmi 7 cycles de formation différents.</p>
+        <div class="block-button">
+          <a href="postbac.html">Cycles post-bac</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block-alternance">
+      <img src="https://isen-ouest.fr/wp-content/uploads/2024/10/18/formation-apprentissage-scaled.jpg" alt="Apprentissage">
+      <div class="block-alternance-content">
+        <h2>Devenir ingénieur par alternance</h2>
+        <p>Le cycle ingénieur en apprentissage permet d'alterner les périodes à l'école et les périodes au sein de l'entreprise d'accueil en montant progressivement en compétence.</p>
+        <p>Cette formation favorise une immersion professionnelle rapide tout en étant rémunéré pendant toute la durée du contrat.</p>
+        <div class="block-button">
+          <a href="apprentissage.html">Formation d'ingénieurs sous statut apprenti</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
 
 <footer class="site-footer">
   <div class="footer-container">
